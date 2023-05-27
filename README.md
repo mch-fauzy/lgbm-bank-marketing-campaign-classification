@@ -22,7 +22,39 @@
 
 # Business Understanding
 ## Context
-Perusahaan memiliki data berisi informasi tentang transaksi ecommerce yang dilakukan oleh pelanggan di Pakistan. Data mencakup berbagai kolom seperti "Item ID", "Order Status", "Date of Order", "SKU", "Price", "Quantity", "Grand Total", "Category", "Payment Method" dan "Customer ID“. Perusahaan ingin menggunakan data tersebut untuk menyusun strategi bisnis berdasarkan data.
+Based on [Investopedia](https://www.investopedia.com/terms/t/termdeposit.asp), a `term deposit` is a `fixed-term investment` that includes the deposit of money into an account at a financial institution. Term deposit investments usually carry `short-term maturities` ranging from `one month to a few years` and will have varying levels of required minimum deposits.
+
+When an account holder `deposits` funds at a bank, the bank can `use that money` to `lend` to other consumers or businesses. `In return` for the right to use these funds for lending, they will `pay the depositor compensation` in the form of `interest` on the account balance. 
+
+> A customer will `deposit or invest` in one of these accounts, agreeing `not to withdraw` their funds for a `fixed period in return` for a `higher rate of interest` paid on the account.
+
+> The `interest earned` on a term deposit account is `slightly higher` than that paid on standard savings or interest-bearing checking accounts. The increased rate is `because access to the money is limited` for the `timeframe` of the term deposit.
+
+> Term deposits are an `extremely safe investment` and are therefore very appealing to conservative, low-risk investors
+
+For example
+> * A lender (bank) may offer a 2% rate for term deposits with a two-year maturity. 
+> * The `funds deposited` are then `structured as loans to borrowers` who are `charged 7% in interest` on those notes. 
+> * This difference in rates means that the `bank makes a net 5% return`. 
+> * The spread between the rate the bank pays its customers for deposits and the rate it charges its borrowers is called `net interest margin`. Net interest margin is a profitability metric for banks.
+
+Banks are businesses, as such, they want to pay the `lowest rate possible for term deposits` and `charge a much higher rate to borrowers for loans`. This practice increases their margins or profitability. 
+> However, there is a `balance the bank needs to maintain`. If it `pays too little interest`, it `won't attract new customers` into the term deposit accounts. Also, if they `charge too high` of a rate on loans, it `won't attract new borrowers`.
+
+In `periods of rising interest rates`, consumers are more `likely to purchase term deposits` since the `increased cost of borrowing` makes `savings (deposit) more attractive`. Also, with higher market interest rates, the financial institution will need to offer the customers a higher rate of interest, so the customers also earns more.
+
+When `interest rates decrease`, consumers are `encouraged to borrow and spend more`, thereby stimulating the economy. In a `low interest rate` environment, `demand for term deposits` can `decrease` since customers can typically find alternative investment vehicles that pay a higher rate.
+
+> `Interest rates` should be `proportional` to the `time until maturity`, and the `minimum amount of principal lent` to the credit union or bank. 
+
+> In other words, a `six-month term deposit` will likely pay a `lower interest rate` than a `two-year term deposit`. Customer `not only` receive a `higher rate` for `locking up their money` with the bank for extended periods, but also should `earn a higher rate for large deposits`. 
+
+Based on the theoretical research [Factors Affecting Savings Deposit Decision of Individual Customers](https://www.researchgate.net/publication/342864549_Factors_Affecting_Savings_Deposit_Decision_of_Individual_Customers_Empirical_Evidence_from_Vietnamese_Commercial_Banks)  by Bui Nhat Vuong and team, the authors have looked at the model of the theory of consumer behavior.
+
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/deposit_customer_behavior_model.jpeg">
+
+Nevertheless, as business entities with financial products and respective customers, banks still have to compete to not lose customers. One of the ways to `acquire new customers` is by `conducting a marketing campaign`, in this dataset based on `customers demographic` and `Employee Knowledge`.
+
 
 ## Problem Statement
 `Marketing` plays an increasingly important role, it has become one of the `factors` that directly `influence` the customer’s deposit decision. Promotions `contribute` to the customer’s decisions because if the bank puts out impressive promotions, creating benefits for customers, it will `attract` customers attention.
