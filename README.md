@@ -9,8 +9,8 @@
 [Business Understanding](#Business-Understanding)<br>
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
 [Data Preprocessing](#Data-Preprocessing)<br>
-[Model Building](#Model-Building)<br>
-[Model Evaluation](#Model-Evaluation)<br>
+[Model Building & Evaluation](#Model-Building-&-Evaluation)<br>
+[Business Impact](#Business-Impact)<br>
 [Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
 # Business Understanding
@@ -118,7 +118,7 @@ There are no columns with missing value
   * drop duplicate in X (predictor):<br>
   `X_train.drop_duplicates(inplace=True)`
 
-# Data Pre-Processing
+# Data Preprocessing
 ## Outliers Handling
 ### Equal Frequency Discretisation
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/equal_freq_bins.png">
@@ -197,7 +197,9 @@ Remove data which impact each other independent variables
 
 ### Boruta SHAP
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/boruta_shap.png">
+
 Select top features using machine learning algorithm with SHAP importance
+
 > Feature selected is based on Z-score compared to shadow feature. If lower than shadow feature z-score, it will be likely to unimportant
 
 8 features were selected to be used for modeling with the condition that Z-score > shadow feature (random number)
@@ -209,6 +211,17 @@ Select top features using machine learning algorithm with SHAP importance
 * Housing
 * month
 * poutcome
+
+# Model Building and Evaluation
+## How LGBM Created
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/what_is_lgbm_1.jpg">
+
+## What is LGBM?
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/what_is_lgbm_2.jpg">
+
+Unlike other gradient boosting algorithms it uses level-wise tree growth. LightGBM uses an algorithm with leaf-wise tree growth. So when forming the same leaf level, LightGBM can reduce more loss and give better results and LightGBM also works very fast.
+
+##
 
 # Conclusion and Recommendation
 ## Conclusion
