@@ -33,10 +33,10 @@ When an account holder `deposits` funds at a bank, the bank can `use that money`
 > Term deposits are an `extremely safe investment` and are therefore very appealing to conservative, low-risk investors
 
 For example
-> * A lender (bank) may offer a 2% rate for term deposits with a two-year maturity. 
-> * The `funds deposited` are then `structured as loans to borrowers` who are `charged 7% in interest` on those notes. 
-> * This difference in rates means that the `bank makes a net 5% return`. 
-> * The spread between the rate the bank pays its customers for deposits and the rate it charges its borrowers is called `net interest margin`. Net interest margin is a profitability metric for banks.
+* A lender (bank) may offer a 2% rate for term deposits with a two-year maturity. 
+* The `funds deposited` are then `structured as loans to borrowers` who are `charged 7% in interest` on those notes. 
+* This difference in rates means that the `bank makes a net 5% return`. 
+* The spread between the rate the bank pays its customers for deposits and the rate it charges its borrowers is called `net interest margin`. Net interest margin is a profitability metric for banks.
 
 Banks are businesses, as such, they want to pay the `lowest rate possible for term deposits` and `charge a much higher rate to borrowers for loans`. This practice increases their margins or profitability. 
 > However, there is a `balance the bank needs to maintain`. If it `pays too little interest`, it `won't attract new customers` into the term deposit accounts. Also, if they `charge too high` of a rate on loans, it `won't attract new borrowers`.
@@ -67,6 +67,21 @@ To identify the `factors` that `influence` the customer's decision and to build 
 * Determine which marketing campaign `channels` and `season` were the most effective in attracting customers.
 * Develop `insights and recommendations` for improving future marketing campaigns.
 
+## Analytics Approach
+The analytics approach could involve using `descriptive statistics and data visualization` techniques to explore the data and `identify trends and patterns`. We could also use machine learning techniques such as classification to build `predictive models` that can help us understand which `factors` are most `important` in `predicting` whether a customer will make a `deposit`.
+* Data Cleaning: Check for missing values, duplicate rows, and anomalies in the data.
+* Data Preprocessing: Check for outlier, create new features from existing variables that may help in modelling, remove redundant feature, and apply feature selection.
+* Model Building: Build predictive models to identify the factors that influence the term deposit subscription and to predict the likelihood of a customer subscribing to the term deposit.
+* Model Evaluation: Evaluate the performance of the models using appropriate evaluation metrics.
+* Insights and Recommendations: Based on the analysis, develop insights and recommendations for improving future marketing campaigns.
+
+## Evaluation Metrics
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/confusion_matrix.png">
+* Recall (Sensitivity): The proportion of `true positive predictions` out of all `actual positive` cases. In other words, recall measures how good the classifier is at `finding all` the `positive instances (subscribe)`.
+    * The `lower the recall`, the `higher` the `loss` of `potential customers`.
+* Specificity: The proportion of `true negative predictions` out of all `actual negative` cases. In other words, specificity measures how good the classifier is at `finding all` the `negative instances (not subscribe)`.
+    * The `higher the specificity`, the `lower the marketing costs`, especially for `non-potential customers`.
+* ROC AUC Score: The area under the receiver operating characteristic curve, which measures the ability of the `model` to `distinguish` between positive (subscribe) and negative (not subscribe) cases with ROC-AUC above 70%
 
 # Data Cleaning and Preparation
 Pada tahap ini dilakukan pemahaman dan pembersihan data untuk mempersiapkan data sebelum dilakukan analisa <br>
