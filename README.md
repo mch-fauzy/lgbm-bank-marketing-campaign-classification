@@ -10,7 +10,6 @@
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
 [Data Preprocessing](#Data-Preprocessing)<br>
 [Model Building & Evaluation](#Model-Building-&-Evaluation)<br>
-[Business Impact](#Business-Impact)<br>
 [Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
 # Business Understanding
@@ -239,6 +238,7 @@ There is no significant different between Train and Test ROC-AUC, so the model i
 * Test ROC-AUC: 77%
 
 ### Business Impact
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/recall_specificity.png">
 
 * Based on the model, we might lose 33% potential users but we can filter customers who unlikely to subscribe up to 74%
     * In example, if we have 100 customers, the model can reject the 74 customers who unlikely to subscribe
