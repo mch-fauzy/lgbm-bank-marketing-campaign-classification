@@ -77,11 +77,12 @@ The analytics approach could involve using `descriptive statistics and data visu
 
 ## Evaluation Metrics
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/confusion_matrix.png">
+
 * Recall (Sensitivity): The proportion of `true positive predictions` out of all `actual positive` cases. In other words, recall measures how good the classifier is at `finding all` the `positive instances (subscribe)`.
-    * The `lower the recall`, the `higher` the `loss` of `potential customers`.
+   * The `lower the recall`, the `higher` the `loss` of `potential customers`.
     
 * Specificity: The proportion of `true negative predictions` out of all `actual negative` cases. In other words, specificity measures how good the classifier is at `finding all` the `negative instances (not subscribe)`.
-    * The `higher the specificity`, the `lower the marketing costs`, especially for `non-potential customers`.
+   * The `higher the specificity`, the `lower the marketing costs`, especially for `non-potential customers`.
     
 * ROC AUC Score: The area under the receiver operating characteristic curve, which measures the ability of the `model` to `distinguish` between positive (subscribe) and negative (not subscribe) cases with ROC-AUC above 70%
 
