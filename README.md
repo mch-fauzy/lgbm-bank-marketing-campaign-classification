@@ -108,9 +108,8 @@ There are no columns with missing value
 
 ## Data Consistency and Anomalies
 1. Grouping Common Labels
-
-* `admin.` to `admin`
-* `other` to `unknown`
+  * `admin.` to `admin`
+  * `other` to `unknown`
 
 2. Drop Anomalies Data
 Terdapat anomali data pada kolom "status" dan "category_name_1" dengan label "\\N"
