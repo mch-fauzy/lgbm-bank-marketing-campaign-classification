@@ -121,6 +121,8 @@ There are no columns with missing value
 # Data Pre-Processing
 ## Outliers Handling
 ### Equal Frequency Discretisation
+<img scr="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/equal_freq_bins.png">
+
 Equal frequency discretisation divides the scope of possible values of the variable into N bins, 
 
 > where **each bin carries the same amount of observations**. 
@@ -134,6 +136,45 @@ Equal frequency discretisation
 > **using quantiles consists of dividing the continuous variable into N quantiles**, N to be defined by the user.
 
 Equal frequency binning is straightforward to implement and by **spreading the values of the observations more evenly it may help boost the algorithm's performance**.
+
+**Advantages**
+* Handles outliers
+* Good to combine with categorical encodings
+* Improve value spread
+
+**Limitation**
+* Arbitrary binning may also disrupt the relationship with the target
+
+## Categorical Encoding
+### Rare Label Encoding
+<img scr="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/rare_label.png">
+
+**Infrequent** labels are so few, that it is **hard to derive reliable information** from them. But more importantly, **infrequent labels tend to appear only on train set or only on the test set**:
+
+* If only on the train set, they may cause over-fitting
+* If only on the test set, our machine learning model will not know how to score them
+
+**Grouping** infrequent labels or categories under a new category **called 'Rare' or 'Other' is the common practice** in machine learning for business.
+
+* Grouping categories into rare for variables that show **low cardinality may or may not improve model performance**, **however**, we tend to re-group them into a new category to smooth model deployment.
+
+* Grouping categories into rare for variables with **high cardinality**, **tends to improve model performance** as well.
+
+### Ordinal Label Encoding
+<img scr="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/ordinal_label_enc.png">
+
+**Ordering** the categories **according to the target means** assigning a number to the category from 1 to k, where k is the number of distinct categories in the variable, 
+
+> but this numbering is informed by the mean of the target for each category.
+
+**Advantages**
+* Straightforward to implement
+* Does not expand the feature space
+* Creates monotonic relationship between categories
+and target
+
+**Limitations**
+* May lead to over-fitting
 
 # Conclusion and Recommendation
 ## Conclusion
