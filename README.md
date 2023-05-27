@@ -106,27 +106,11 @@ There are 52.2% of No-subs customers and 47.8% of Subs customers, if the marketi
 ## Missing Value Handling
 There are no columns with missing value
 
-## Data Types Conversion
-Convert tanggal ke datetime dan ID ke string <br>
-`df['created_at'] = pd.to_datetime(df['created_at'])`<br>
-`df['Customer Since'] = pd.to_datetime(df['Customer Since'])`<br>
-`df['item_id'] = df['item_id'].astype('int').astype('str')`<br>
-`df['Customer ID'] = df['Customer ID'].astype('int').astype('str')`<br>
-
 ## Data Consistency and Anomalies
 1. Grouping Common Labels
 
-`def group_label(data):`<br>
-    `data['job'] = np.where(data['job'] == 'admin.',`<br> 
-                          `'admin',`<br> 
-                          `data['job'])`<br>
-    `data['poutcome'] = np.where(data['poutcome'] == 'other',`<br>
-                                `'unknown',`<br>
-                                `data['poutcome'])`<br>    
-    `return data`<br>
-
-* admin. to admin
-* other to unknown
+* `admin.` to `admin`
+* `other` to `unknown`
 
 2. Drop Anomalies Data
 Terdapat anomali data pada kolom "status" dan "category_name_1" dengan label "\\N"
