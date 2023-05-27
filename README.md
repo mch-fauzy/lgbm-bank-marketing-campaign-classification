@@ -176,6 +176,40 @@ and target
 **Limitations**
 * May lead to over-fitting
 
+## Model Benchmark
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/model_benchmark.jpg">
+
+* Train the data with various model, then choose the model with the highest ROC-AUC
+* The best model then selected for hyperparameter tuning
+
+Light Gradient Boosting is choosed because of highest ROC-AUC
+
+## Feature Selection
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/remove_multicoll.png">
+
+### Remove Constant and Duplicated 
+Remove low variance and duplicated data
+
+### Remove Multicollinearity
+Remove data which impact each other independent variables
+
+> Two features were found, having a strong correlation (r>0.7), namely pdays and poutcome. Then the one with the higher variance will be selected.
+
+### Boruta SHAP
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/boruta_shap.png">
+Select top features using machine learning algorithm with SHAP importance
+> Feature selected is based on Z-score compared to shadow feature. If lower than shadow feature z-score, it will be likely to unimportant
+
+8 features were selected to be used for modeling with the condition that Z-score > shadow feature (random number)
+* contact
+* age
+* Campaigns
+* Job
+* balance
+* Housing
+* month
+* poutcome
+
 # Conclusion and Recommendation
 ## Conclusion
 Dari analisis yang telah dilakukan, dapat disimpulkan:
