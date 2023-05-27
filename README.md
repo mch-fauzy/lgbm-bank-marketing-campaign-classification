@@ -87,30 +87,28 @@ The analytics approach could involve using `descriptive statistics and data visu
 * ROC AUC Score: The area under the receiver operating characteristic curve, which measures the ability of the `model` to `distinguish` between positive (subscribe) and negative (not subscribe) cases with ROC-AUC above 70%
 
 # Data Cleaning and Preparation
-Pada tahap ini dilakukan pemahaman dan pembersihan data untuk mempersiapkan data sebelum dilakukan analisa <br>
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/data_preprocessing.jpg">
 
-## Drop Unused Columns
-Kolom-kolom berikut akan di drop karena tidak digunakan dalam analisa:<br>
-`'Unnamed: 21', 'Unnamed: 22', 'Unnamed: 23', 'Unnamed: 24', 'Unnamed: 25', 'increment_id',
- 'sales_commission_code', 'Working Date', 'BI Status', ' MV ', 'Year', 'M-Y', 'FY', 'Month'`
+Feature Description: <br>
+* age: (numeric)
+* job: type of job (categorical: 'admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','services','student','technician','unemployed','unknown')
+* housing: has housing loan? (categorical: 'no','yes','unknown')
+* loan: has personal loan? (categorical: 'no','yes','unknown')
+* balance: Balance of the individual.
+* contact: contact communication type (categorical: 'cellular','telephone','unknown')
+* month: last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')
+* campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
+* pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric; -1 means client was not previously contacted))
+* poutcome: outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')
+* deposit : as the client subscribed a term deposit? (binary: 1,0)
 
-Karena item_id unik pada setiap baris sedangkan sku tidak, maka item_id adalah ID transaksi/order bukan ID barang. 
 
-Berikut adalah kolom yang akan digunakan dalam proses analisis:
+## Train-Test Split
+To avoid data leakage from training data to test data, we only fit in training data <br>
+`X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=44, stratify=y)`
+ 
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/initial_target_distribution.png">
 
-* item_id: ID unik transaksi/order
-* status: status barang yang dibeli 
-* created_at: tanggal order
-* sku: stock keeping unit, ID unik barang
-* price: harga barang
-* qty_ordered: jumlah barang yang dibeli
-* grand_total: total harga barang yang dibeli 
-* category_name_1: kategori barang
-* discount_amount: diskon barang
-* payment_method: cara pembayaran
-* Customer Since: waktu pertama pelanggan menggunakan platform
-* Customer ID: ID pelanggan
+There are 52.2% of No-subs customers and 47.8% of Subs customers, if the marketing campaign uses random calls
 
 ## Missing Value Handling
 1. Drop Rows with All NaN Values<br>
