@@ -107,11 +107,11 @@ There are 52.2% of No-subs customers and 47.8% of Subs customers, if the marketi
 There are no columns with missing value
 
 ## Data Consistency and Anomalies
-1. Grouping Common Labels
+1. Grouping Common Labels<br>
   * `admin.` to `admin`
   * `other` to `unknown`
 
-2. Drop Duplicate Data
+2. Drop Duplicate Data<br>
    Drop for train data, test data not dropped because not used for training the model <br>
   * drop duplicate in y (target):<br>
    `y_train.drop(X_train[X_train.duplicated()].index, inplace=True)`
@@ -119,80 +119,21 @@ There are no columns with missing value
   `X_train.drop_duplicates(inplace=True)`
 
 # Data Pre-Processing
-## Product Price
+## Outliers Handling
+### Equal Frequency Discretisation
+Equal frequency discretisation divides the scope of possible values of the variable into N bins, 
 
-Untuk menjawab pertanyaan berikut:
-* Berapa rentang harga produk yang sering dibeli customer?
-* Produk apa yang berada pada rentang harga tersebut?
+> where **each bin carries the same amount of observations**. 
 
-Akan dilakukan analisa terhadap harga dan kategori produk <br>
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis1.jpg">
+> This is **particularly useful for skewed variables** as it **spreads the observations over the different bins equally**. 
 
-## Order Quantity Frequency
+We find the interval boundaries by determining the quantiles.
 
-Untuk menjawab pertanyaan berikut:
-* Berapa order quantity customer?
-* Apa pengaruh order quantity terhadap status order customer?
+Equal frequency discretisation 
 
-Akan dilakukan analisa order quantity berdasarkan status ordernya<br>
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis2.jpg">
+> **using quantiles consists of dividing the continuous variable into N quantiles**, N to be defined by the user.
 
-## Order by Category
-
-Untuk menjawab pertanyaan berikut:
-* Apakah ada perbedaan total order dan complete order rate tiap kategori
-
-Akan dilakukan analisa total order dan complete rate berdasarkan produk catogry<br>
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis3.jpg">
-
-## Trends of Grand Total and Total Orders
-
-Untuk menjawab pertanyaan berikut:
-* Bagaimana pola grand total dan total order dari waktu ke waktu?
-* Apa dampaknya terhadap complete order rate
-
-Akan dilakukan analisa grand total (setelah diskon) tiap order secara quarter dan bulanan beserta rasio complete order<br>
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis4.jpg">
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis5.jpg">
-
-## Monthly Product Price by Order Status
-
-Untuk menjawab pertanyaan berikut:
-* Apakah tidak ada perbedaan distribusi customer dengan Complete Order dan Canceled Order?
-
-Akan dilakukan analisa terhadap rata-rata harga bulanan berdasarkan status ordernya<br>
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis6.jpg">
-
-## Monthly Discount Amount and Grand Total by Order Status
-
-Untuk menjawab pertanyaan berikut:
-* Apakah ada pengaruh jumlah diskon terhadap complete dan cancel order?
-* Apakah ada pengaruh grand total terhadap complete dan cancel order?
-
-Akan dilakukan analisa jumlah diskon dan grand total berdasarkan status ordernya<br>
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis7.jpg">
-
-## Retention Last 1 Year
-
-Untuk menjawab pertanyaan berikut:
-* Apakah customer masih menggunakan platform e-commerce dalam 1 tahun kebelakang?
-* Apakah ada pola tertentu pada aktivitas customer dalam 1 tahun?
-
-Analisa Retention dilakukan dengan mengecualikan order yang fraud<br>
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis8.jpg">
-
-## RFM
-
-Untuk menjawab pertanyaan berikut:
-* Bagaimana distribusi recency, frequency order dan monetary value tiap customer?
-
-Analisa RFM dilakukan dengan mengecualikan order yang fraud
-
-[RFM segmentation references](https://github.com/daniel-isidro/customer_segmentation)
-
-NB: Average Order Value tidak diterapkan karena distribusi price tidak normal sehingga missleading dalam perancangan strategi. Contohnya AOV tinggi dengan price tinggi tapi order rendah, sekilas menunjukan performance yang bagus tetapi jika ditinjau secara quantity, akan menunjukan quantity penjualan yang rendah. <br>
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis9.jpg">
-<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-2/blob/main/media/analysis10.jpg">
+Equal frequency binning is straightforward to implement and by **spreading the values of the observations more evenly it may help boost the algorithm's performance**.
 
 # Conclusion and Recommendation
 ## Conclusion
