@@ -1,7 +1,7 @@
 # **Bank Marketing Campaign Classification**
-| **Report (PDF)** | **Dashboard** |
-|:---:|:---:|
-| **[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** | **[Tableau Story](https://public.tableau.com/views/PakistanE-CommerceSalesPerformanceandCustomerRFMBehaviour/DashboardStory?:language=en-US&:display_count=n&:origin=viz_share_link)**
+| **Report (PDF)** |
+|:---:|
+| **[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** |
 
 
 # Table of Contents
@@ -21,28 +21,20 @@
 [Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
 # Business Understanding
-## Latar Belakang
+## Context
 Perusahaan memiliki data berisi informasi tentang transaksi ecommerce yang dilakukan oleh pelanggan di Pakistan. Data mencakup berbagai kolom seperti "Item ID", "Order Status", "Date of Order", "SKU", "Price", "Quantity", "Grand Total", "Category", "Payment Method" dan "Customer ID“. Perusahaan ingin menggunakan data tersebut untuk menyusun strategi bisnis berdasarkan data.
 
-## Pernyataan Masalah
-Perusahaan E-Commerce ingin mengetahui sales performance dan customer behavior. Informasi ini akan membantu perusahaan untuk menentukan strategi dalam meningkatkan penjualan dan kepuasan pelanggan. 
+## Problem Statement
+`Marketing` plays an increasingly important role, it has become one of the `factors` that directly `influence` the customer’s deposit decision. Promotions `contribute` to the customer’s decisions because if the bank puts out impressive promotions, creating benefits for customers, it will `attract` customers attention.
 
-Sebagai Data Analyst, saya bertugas untuk memahami customer behavior dan rekomendasi apa yang dapat diberikan untuk meningkatkan penjualan dan kepuasan pelanggan.
+The bank wants to analyze the `effectiveness` of its marketing campaign for a term deposit subscription to determine whether the campaign was successful or not.
 
-* Berapa rentang harga produk yang sering dibeli customer?
-* Produk apa yang berada pada rentang harga tersebut?
-* Berapa order quantity customer?
-* Apa pengaruh order quantity terhadap status order customer?
-* Apakah ada perbedaan total order dan complete order rate tiap kategori?
-* Bagaimana pola grand total dan total order dari waktu ke waktu?
-* Apa dampak trend terhadap complete order rate?
-* Apakah tidak ada perbedaan distribusi customer dengan Complete Order dan Canceled Order?
-* Apakah ada pengaruh jumlah diskon terhadap complete dan cancel order?
-* Apakah ada pengaruh grand total terhadap complete dan cancel order?
-* Apakah customer masih menggunakan platform e-commerce dalam 1 tahun kebelakang?
-* Apakah ada pola tertentu pada aktivitas customer dalam 1 tahun?
-* Bagaimana distribusi recency, frequency order dan monetary value tiap customer?
-* Apa yang dapat dilakukan oleh perusahaan dari data-data tersebut?
+## Goals
+To identify the `factors` that `influence` the customer's decision and to build a `classification model` that can `reduce the cost` of marketing.
+* Understand the `characteristics of customers` who subscribed to the term deposit and those who did not.
+* Determine which marketing campaign `channels` and `season` were the most effective in attracting customers.
+* Develop `insights and recommendations` for improving future marketing campaigns.
+
 
 # Data Cleaning and Preparation
 Pada tahap ini dilakukan pemahaman dan pembersihan data untuk mempersiapkan data sebelum dilakukan analisa <br>
