@@ -221,7 +221,34 @@ Select top features using machine learning algorithm with SHAP importance
 
 Unlike other gradient boosting algorithms it uses level-wise tree growth. LightGBM uses an algorithm with leaf-wise tree growth. So when forming the same leaf level, LightGBM can reduce more loss and give better results and LightGBM also works very fast.
 
-##
+## Model Selection
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/model_selection.jpg">
+
+## Model Evaluation
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/threshold%20selection.jpg">
+
+* ROC is a probability curve and AUC represents the degree or measure of separability. It tells how much the model is capable of distinguishing between classes. 
+
+* Higher the AUC, the better the model is at predicting 0 classes as 0 and 1 classes as 1. By analogy, the Higher the AUC, the better the model is at distinguishing between patients with the disease and no disease. 
+
+* It works by ranking the probabilities of prediction of the positive class label and calculating the Area under the ROC Curve which is plotted between True Positive Rates and False Positive Rates for each threshold value
+
+There is no significant different between Train and Test ROC-AUC, so the model is not overfit
+
+* Train ROC-AUC: 79%
+* Test ROC-AUC: 77%
+
+### Business Impact
+
+* Based on the model, we might lose 33% potential users but we can filter customers who unlikely to subscribe up to 74%
+    * In example, if we have 100 customers, the model can reject the 74 customers who unlikely to subscribe
+* According to this [dataset](https://www.kaggle.com/datasets/volodymyrgavrysh/bank-marketing-campaigns-dataset), average marketing cost each person is 94 EUR
+    > * If we use random call, the marketing cost will be `all_customers*94` = `2344*94` = `220366 EUR` 
+    > * Of the 100 customers who are marketing targets, only 48 (48%) customers have the potential to subscribe
+    
+    > * If we use the model, the marketing cost will be `filtered_user*94` = `1061*94` = `99734 EUR`. In others word, the marketing cost `reduced by 54.7%` with 70% precision to correctly predict potential customers
+    > * The model recommends 100 customers as marketing targets, then 70 people have the potential to subscribe
+* If we use the model, we can `improve` subscribe ratio from `48% (random call) to 70%` with `reduced cost` up to `54.7%`
 
 # Conclusion and Recommendation
 ## Conclusion
