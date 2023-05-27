@@ -8,16 +8,9 @@
 
 [Business Understanding](#Business-Understanding)<br>
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
-[Exploratory Data Analysis](#Exploratory-Data-Analysis)<br>
-1. [Product Price](#Product-Price)<br>
-2. [Order Quantity Frequency](#Order-Quantity-Frequency)<br>
-3. [Order by Category](#Order-by-Category)<br>
-4. [Trends of Grand Total and Total Orders](#Trends-of-Grand-Total-and-Total-Orders)<br>
-5. [Monthly Product Price by Order Status](#Monthly-Product-Price-by-Order-Status)<br>
-6. [Monthly Discount Amount and Grand Total by Order Status](#Monthly-Discount-Amount-and-Grand-Total-by-Order-Status)<br>
-7. [Retention Last 1 Year](#Retention-Last-1-Year)<br>
-8. [RFM](#RFM)<br>
-
+[Data Preprocessing](#Data-Preprocessing)<br>
+[Model Building](#Model-Building)<br>
+[Model Evaluation](#Model-Evaluation)<br>
 [Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
 # Business Understanding
@@ -111,15 +104,7 @@ To avoid data leakage from training data to test data, we only fit in training d
 There are 52.2% of No-subs customers and 47.8% of Subs customers, if the marketing campaign uses random calls
 
 ## Missing Value Handling
-1. Drop Rows with All NaN Values<br>
-`df.dropna(axis=0, how='all', inplace=True)`<br>
-2. Drop Rows if Customer ID is NaN<br>
-`df.dropna(subset=['Customer ID'], axis=0, inplace=True)`<br>
-3. Most Frequent Imputation for NaN under 5%<br>
-Karena NaN pada categorical data dibawah 5%, maka NaN akan di imputasi dengan nilai yang sering muncul.<br>
-`df['sku'].fillna(df['sku'].mode()[0], inplace=True)`<br>
-`df['status'].fillna(df['status'].mode()[0], inplace=True)`<br>
-`df['category_name_1'].fillna(df['category_name_1'].mode()[0], inplace=True)`<br>
+There are no columns with missing value
 
 ## Data Types Conversion
 Convert tanggal ke datetime dan ID ke string <br>
@@ -130,13 +115,18 @@ Convert tanggal ke datetime dan ID ke string <br>
 
 ## Data Consistency and Anomalies
 1. Grouping Common Labels
- Beberapa label di kolom status memiliki kesamaan arti:
 
-* RECEIVED dan CLOSED menjadi COMPLETE
-* ORDER_REFUNDED dan REFUND menjadi CANCELED
-* PENDING_PAYPAL, PAYMENT_REVIEW, PENDING, HOLDED, EXCHANGE, PAID, dan COD menjadi PROCESSING
-* Label "PROCESSING" dan "FRAUD" sangatlah kecil (0.7 dan 0.001%), jadi bisa di drop jika tidak diperlukan dalam analisis 
-* EASYPAY_MA dan EASYPAY_VOUCHER menjadi EASYPAY
+`def group_label(data):`<br>
+    `data['job'] = np.where(data['job'] == 'admin.',`<br> 
+                          `'admin',`<br> 
+                          `data['job'])`<br>
+    `data['poutcome'] = np.where(data['poutcome'] == 'other',`<br>
+                                `'unknown',`<br>
+                                `data['poutcome'])`<br>    
+    `return data`<br>
+
+* admin. to admin
+* other to unknown
 
 2. Drop Anomalies Data
 Terdapat anomali data pada kolom "status" dan "category_name_1" dengan label "\\N"
@@ -186,7 +176,7 @@ Buat fitur baru sebagai indikator apakah customer menyelesaikan order atau tidak
 `df.duplicated().sum()`<br>
 Tidak ditemukan data duplikat
 
-# Exploratory Data Analysis
+# Data Pre-Processing
 ## Product Price
 
 Untuk menjawab pertanyaan berikut:
