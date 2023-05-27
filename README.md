@@ -111,53 +111,11 @@ There are no columns with missing value
   * `admin.` to `admin`
   * `other` to `unknown`
 
-2. Drop Anomalies Data
-Terdapat anomali data pada kolom "status" dan "category_name_1" dengan label "\\N"
-* Karena persentasenya sangat kecil (1%), maka baris dengan label "\\N" akan di drop
-
-3. Replace Anomalies Data
-Terdapat anomali data pada kolom "grand_total" dan "discount_amount", yaitu nilainya ada yang negatif (harga dan diskon seharusnya tidak negatif)
-* Maka akan di filter hanya include grand total dan diskon yang lebih dari 0
-
-## Add New Features (Feature Improvements)
-1. Order Quantity Binning <br>
-Group order quantity menjadi beberapa label seperi 6-10,11-20,dst <br>
-`df['qty_bins'] = pd.cut(`<br>
-    `df.qty_ordered,`<br>
-    `bins=[0, 1, 2, 3, 4, 5, 10, 20, 100, 1000],`<br>
-    `include_lowest=True,`<br>
-    `labels=["1", "2", "3", "4", "5", "6-10", "11-20", "21-100", "101-1000"]`<br>
-`)`<br>
-
-2. Monthly Period <br>
-Buat fitur baru berdasarkan orde bulanan <br>
-`df["order_month"] = df['created_at'].dt.to_period("M")` <br>
-
-3. Quarter Period <br>
-Buat fitur baru berdasarkan orde kuartal <br>
-`df["order_quarter"] = df['created_at'].dt.to_period("Q")` <br>
-
-4. Day of Week <br>
-Buat fitur baru berdasarkan orde day of week <br>
-`dow_mapping = {`<br>
-    `0: "Monday",`<br>
-    `1: "Tuesday",`<br>
-    `2: "Wednesday",`<br>
-    `3: "Thursday",`<br>
-    `4: "Friday",`<br>
-    `5: "Saturday",`<br>
-    `6: "Sunday",`<br>
-`}`<br>
-`df["day_of_week"] = df['created_at'].dt.dayofweek`<br>
-`df["day_of_week"] = df["day_of_week"].map(dow_mapping)` <br>
-
-5. Is Complete Order? <br>
-Buat fitur baru sebagai indikator apakah customer menyelesaikan order atau tidak <br>
-`df["is_complete"] = df['status'].apply(lambda x: 1 if x in ["COMPLETE"] else 0)` <br>
-
-## Check/Drop Duplicate Data <br>
-`df.duplicated().sum()`<br>
-Tidak ditemukan data duplikat
+2. Drop Duplicate Data
+  * drop duplicate in y (target)
+   `y_train.drop(X_train[X_train.duplicated()].index, inplace=True)`
+  * drop duplicate in X (predictor)
+  `X_train.drop_duplicates(inplace=True)`
 
 # Data Pre-Processing
 ## Product Price
