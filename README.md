@@ -112,9 +112,10 @@ There are no columns with missing value
   * `other` to `unknown`
 
 2. Drop Duplicate Data
-  * drop duplicate in y (target)
+   Drop for train data, test data not dropped because not used for training the model <br>
+  * drop duplicate in y (target):<br>
    `y_train.drop(X_train[X_train.duplicated()].index, inplace=True)`
-  * drop duplicate in X (predictor)
+  * drop duplicate in X (predictor):<br>
   `X_train.drop_duplicates(inplace=True)`
 
 # Data Pre-Processing
