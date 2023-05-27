@@ -121,7 +121,7 @@ There are no columns with missing value
 # Data Pre-Processing
 ## Outliers Handling
 ### Equal Frequency Discretisation
-<img scr="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/equal_freq_bins.png">
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/equal_freq_bins.png">
 
 Equal frequency discretisation divides the scope of possible values of the variable into N bins, 
 
@@ -147,7 +147,7 @@ Equal frequency binning is straightforward to implement and by **spreading the v
 
 ## Categorical Encoding
 ### Rare Label Encoding
-<img scr="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/rare_label.png">
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/rare_label.png">
 
 **Infrequent** labels are so few, that it is **hard to derive reliable information** from them. But more importantly, **infrequent labels tend to appear only on train set or only on the test set**:
 
@@ -161,7 +161,7 @@ Equal frequency binning is straightforward to implement and by **spreading the v
 * Grouping categories into rare for variables with **high cardinality**, **tends to improve model performance** as well.
 
 ### Ordinal Label Encoding
-<img scr="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/ordinal_label_enc.png">
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/ordinal_label_enc.png">
 
 **Ordering** the categories **according to the target means** assigning a number to the category from 1 to k, where k is the number of distinct categories in the variable, 
 
