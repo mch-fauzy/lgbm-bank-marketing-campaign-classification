@@ -1,7 +1,7 @@
 # **Bank Marketing Campaign Classification**
-| **Report (PDF)** |
-|:---:|
-| **[Analysis](https://drive.google.com/file/d/1PX9So7JlmAs--c4fCEt6BYwxG5BZbUBk/view?usp=sharing)** |
+| **Report** | **Script** |
+|:---:|:---:|
+| **[PDF](https://drive.google.com/file/d/15lNNkDXFw3ePQ5ge7EvQFP93LvOxlXpo/view?usp=drive_link)** | **[Jupyter Notebook](https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/Classification_Bank%20Marketing%20Campaign.ipynb)** |
 
 
 # Table of Contents
