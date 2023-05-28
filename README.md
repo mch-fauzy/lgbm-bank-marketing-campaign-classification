@@ -224,7 +224,7 @@ Unlike other gradient boosting algorithms it uses level-wise tree growth. LightG
 ## Model Selection
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/model_selection.jpg">
 
-### Hyperparameter Tuning
+### Hyperparameters Tuning
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/hyperparams_convergence.png">
 
 The LGBM model will undergo hyperparameter tuning:
@@ -270,6 +270,25 @@ There is no significant different between Train and Test ROC-AUC, so the model i
 * If we use the model, we can `improve` subscribe ratio from `48% (random call) to 70%` with `reduced cost` up to `54.7%`
 
 # Model Explainability
+## Global Explainer - SHAP
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/shap_global_2.jpg">
+
+## Local Explainer
+
+### Why Subscribe (1)?
+
+### Why Not Subscribe (0)?
+
+## Predictive Features
+
+### poutcome
+### month
+### contact
+### housing
+### balance
+### age
+### job
+### campaign
 
 
 # Conclusion and Recommendation
