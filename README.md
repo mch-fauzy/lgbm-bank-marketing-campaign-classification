@@ -10,6 +10,7 @@
 [Data Cleaning and Preparation](#Data-Cleaning-and-Preparation)<br>
 [Data Preprocessing](#Data-Preprocessing)<br>
 [Model Building & Evaluation](#Model-Building-and-Evaluation)<br>
+[Model Explainability](#Model-Explainability)<br>
 [Conclusion and Recommendation](#Conclusion-and-Recommendation)<br>
 
 # Business Understanding
@@ -223,6 +224,19 @@ Unlike other gradient boosting algorithms it uses level-wise tree growth. LightG
 ## Model Selection
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/model_selection.jpg">
 
+### Hyperparameter Tuning
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/hyperparams_convergence.png">
+
+The LGBM model will undergo hyperparameter tuning:
+* n_estimators: number of boosting iterations
+* max_depth: limit the max depth for tree model. This is used to deal with over-fitting when data is small. Tree still grows leaf-wise
+* num_leaves: max number of leaves in one tree
+* reg_alpha: L1 regularization to reduce overfitting
+* path_smooth: helps prevent overfitting on leaves with few samples
+* subsample: LightGBM will randomly select a subset of features on each iteration. For example, if you set it to 0.8, LightGBM will select 80% of features before training each tree (can be used to speed up training and deal with overfitting)
+
+The model ROC-AUC is convergence in 0.765
+
 ## Model Evaluation
 
 <img src = "https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/roc_auc_standard.jpeg">
@@ -254,6 +268,9 @@ There is no significant different between Train and Test ROC-AUC, so the model i
     > * If we use the model, the marketing cost will be `filtered_user*94` = `1061*94` = `99734 EUR`. In others word, the marketing cost `reduced by 54.7%` with 70% precision to correctly predict potential customers
     > * The model recommends 100 customers as marketing targets, then 70 people have the potential to subscribe
 * If we use the model, we can `improve` subscribe ratio from `48% (random call) to 70%` with `reduced cost` up to `54.7%`
+
+# Model Explainability
+
 
 # Conclusion and Recommendation
 ## Conclusion
