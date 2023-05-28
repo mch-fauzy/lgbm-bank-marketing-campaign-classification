@@ -224,6 +224,11 @@ Unlike other gradient boosting algorithms it uses level-wise tree growth. LightG
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/model_selection.jpg">
 
 ## Model Evaluation
+
+<img src = "https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/roc_auc_standard.jpeg">
+
+By these standards [ROC AUC rule of thumb from Hosmer and Lemeshow](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118548387), a model with an AUC score below 0.7 would be considered poor and anything higher would be considered acceptable or better.
+
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/threshold%20selection.jpg">
 
 * ROC is a probability curve and AUC represents the degree or measure of separability. It tells how much the model is capable of distinguishing between classes. 
