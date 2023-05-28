@@ -289,6 +289,10 @@ There is no significant different between Train and Test ROC-AUC, so the model i
 * Fail to subs in previous marketing campaign (1)
 
 ## Predictive Features
+
+* Event = Subscribe
+* Non-event = Not Subscribe
+
 ### poutcome
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/poutcome.png">
 outcome of the previous marketing campaign
@@ -300,13 +304,86 @@ outcome of the previous marketing campaign
 > Customers who not subscribe (Failure) during previous campaign unlikely to subscribe
 
 ### month
-### contact
-### housing
-### balance
-### age
-### job
-### campaign
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/month.png">
+last contact month of year
 
+* Mei: 0
+* Juli: 1
+* November: 2
+* Juni: 3
+* Agustus: 4
+* Februari: 5
+* April: 6
+* Januari, Maret, September, Oktober, Desember: 7
+
+> Customers who are contacted during Q1 and End of Year likely to subscribe
+
+### contact
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/contact.png">
+contact communication type
+
+* Other: 0
+* Telephone: 1
+* Cellphone: 2
+
+> Customers who are contacted via cellphone or have a cellphone likely to subscribe
+
+### housing
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/housing.png">
+has housing loan?
+
+* Have housing loan: 0
+* Do not have housing loan: 1
+
+> Customers who do not have housing loans tend to subscribe
+
+### balance
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/balance.png">
+balance of the customers account
+
+* balance < 67: 0
+* 67-342: 1
+* 342 - 860: 2
+* 860-2157: 3
+* balance > 2157: 4
+
+> Customers who have a balance of more than 67 likely to subscribe. If want more strict the company can target the campaign for customers who have balance more than 860.
+
+### age
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/age.png">
+age of customers
+
+* age < 31: 0
+* 31-36: 1
+* 36-42: 2
+* 42-52: 3
+* age > 52: 4
+
+> Customers who are below 31 and above 52 likely to subscribe
+
+### job
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/job.png">
+type of job
+
+* blue-collar: 0
+* services: 1
+* technician: 2
+* admin: 3
+* management: 4
+* Other: 5
+* retired': 6
+
+> Customers who are works as blue-collar and services unlikely to subscribe
+
+### campaign
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/campaign.png">
+number of contacts performed during this campaign and for this client
+
+* campaign < 2: 0
+* 2-3: 1
+* campaign > 3: 2
+
+>Customers who are conctacted during campaign below 3 times likely to subscribe
 
 # Conclusion and Recommendation
 ## Conclusion
