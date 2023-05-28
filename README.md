@@ -80,6 +80,7 @@ The analytics approach could involve using `descriptive statistics and data visu
 * ROC AUC Score: The area under the receiver operating characteristic curve, which measures the ability of the `model` to `distinguish` between positive (subscribe) and negative (not subscribe) cases with ROC-AUC above 70%
 
 # Data Cleaning and Preparation
+<img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/data_prep_preprocessing.jpg">
 
 Feature Description: <br>
 * age: (numeric)
