@@ -347,7 +347,7 @@ balance of the customers account
 * 860-2157: 3
 * balance > 2157: 4
 
-> Customers who have a balance of more than 67 likely to subscribe. If want more strict the company can target the campaign for customers who have balance more than 860.
+> Customers who have a balance more than 67 EUR likely to subscribe. If want more strict the company can target the campaign for customers who have balance more than 860 EUR.
 
 ### age
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/age.png">
