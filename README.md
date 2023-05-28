@@ -276,12 +276,14 @@ There is no significant different between Train and Test ROC-AUC, so the model i
 ## Local Explainer - SHAP
 ### Why Subscribe (1)?
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/subscribe.png">
+
 * Not have housing loan (1)
 * High balance (4)
 * Contacted below 2 times during campaign(0)
 
 ### Why Not Subscribe (0)?
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/not_subscribe.png">
+
 * Have housing loan (0)
 * Low balance (0)
 * Fail to subs in previous marketing campaign (1)
@@ -290,12 +292,13 @@ There is no significant different between Train and Test ROC-AUC, so the model i
 ### poutcome
 <img src="https://github.com/mch-fauzy/purwadhika-capstone-project-module-3/blob/main/media/poutcome.png">
 outcome of the previous marketing campaign
+
 * Unknown / No Feedback: 0
 * Failure: 1
 * Success: 2 
 
 > Customers who not subscribe (Failure) during previous campaign unlikely to subscribe
-> 
+
 ### month
 ### contact
 ### housing
