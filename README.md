@@ -266,9 +266,9 @@ There is no significant different between Train and Test ROC-AUC, so the model i
     > * If we use random call, the marketing cost will be `all_customers*94` = `2344*94` = `220366 EUR` 
     > * Of the 100 customers who are marketing targets, only 48 (48%) customers have the potential to subscribe
     
-    > * If we use the model, the marketing cost will be `filtered_user*94` = `1061*94` = `99734 EUR`. In others word, the marketing cost `reduced by 54.7%` with 70% precision to correctly predict potential customers
+    > * If we use the model, the marketing cost will be `filtered_user*94` = `1068*94` = `100392 EUR`. In others word, the marketing cost `reduced by 54.4%` with 70% precision to correctly predict potential customers
     > * The model recommends 100 customers as marketing targets, then 70 people have the potential to subscribe
-* If we use the model, we can `improve` subscribe ratio from `48% (random call) to 70%` with `reduced cost` up to `54.7%`
+* If we use the model, we can `improve` subscribe ratio from `48% (random call) to 70%` with `reduced cost` up to `54.4%`
 
 # Model Explainability
 ## Global Explainer - SHAP
@@ -394,7 +394,7 @@ number of contacts performed during this campaign and for this client
 
 * Model has **potential to lose 33% potential customers**, but model can **filter less potential customers** to subscribe up to **74%** (Specificity)
 
-* Models can **reduce campaign costs** from **220366 EUR** to **99734 EUR**. In other words, **campaign costs reduced** by **54.7%** with **70% precision** to **predict** potential customers **correctly**.
+* Models can **reduce campaign costs** from **220366 EUR** to **100392 EUR**. In other words, **campaign costs reduced** by **54.4%** with **70% precision** to **predict** potential customers **correctly**.
 
 * Successful model **increased subscribe rate** from **48%** (random calls) to **70%**
 
